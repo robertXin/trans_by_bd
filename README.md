@@ -6,7 +6,12 @@
 
 $f = new Transbybd\TransApi('app_id','sec_key');//从百度开放平台中获取的id和密码
 
+
+$f->setCurlTimeout(5);设置curl超时时间，默认为10秒
+
+
 $ret =  $f->translate('china','auto','zh');//第一个参数为需要翻译词，第二个为此词的语言类型，第三个是需要翻译成什么语言（不能传auto）
+
 
 print_r($ret);
 
